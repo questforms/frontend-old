@@ -18,10 +18,10 @@ defineProps<{ msg: string }>()
         <img src="../assets/images/logo-main.svg" class="logo__image" alt="QuestForms" />
       </a>
       <ul class="main-nav__list">
-        <li class="main-nav__item">First nav item</li>
-        <li class="main-nav__item">Second nav item</li>
-        <li class="main-nav__item">Third nav item</li>
-        <li class="main-nav__item">Fourth nav item</li>
+        <li class="main-nav__nav-item"><a href="">First nav item</a></li>
+        <li class="main-nav__nav-item"><a href="">Second nav item</a></li>
+        <li class="main-nav__nav-item"><a href="">Third nav item</a></li>
+        <li class="main-nav__nav-item"><a href="">Fourth nav item</a></li>
       </ul>
     </nav>
   </header>
@@ -40,6 +40,7 @@ defineProps<{ msg: string }>()
 .header__main-nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   padding: 1.5em;
   background-color: #fff;
 }
@@ -49,12 +50,11 @@ defineProps<{ msg: string }>()
 }
 
 .main-nav__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  width: 100%;
+  display: flex;
+  column-gap: 25px;
 }
 
-.main-nav__item {
+.main-nav__nav-item {
   list-style: none;
   text-align: center;
   line-height: 40px;
